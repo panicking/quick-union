@@ -10,7 +10,3 @@ union_find::union_find(const int n)
 	for (int i; i < n; i++)
 		array[i] = i;
 }
-
-union_find::~union_find()
-{
-}

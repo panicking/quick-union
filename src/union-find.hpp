@@ -8,7 +8,7 @@ class union_find {
 
 public:
 	union_find(const int n);
-	~union_find();
+	~union_find() = default;
 
 	void add_union(int a, int b) {
 		int a_v = array[a];
