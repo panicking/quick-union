@@ -11,15 +11,15 @@ public:
 	~union_find() = default;
 
 	void add_union(int a, int b) {
-		int a_v = array[a];
-		int b_v = array[b];
+		const int a_v = array.at(a);
+		const int b_v = array.at(b);
 
 		for (int i = 0; i < array.capacity(); i++)
 			if (array[i] == a_v) array[i] = b_v;
 	};
 
 	bool is_connected(int a, int b) {
-		return array[a] == array[b];
+		return array.at(a) == array.at(b);
 	}
 };
 
