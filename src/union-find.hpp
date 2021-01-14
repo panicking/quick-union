@@ -14,8 +14,8 @@ public:
 		const int a_v = array.at(a);
 		const int b_v = array.at(b);
 
-		for (int i = 0; i < array.capacity(); i++)
-			if (array[i] == a_v) array[i] = b_v;
+		for (int &elem: array)
+			if (elem == a_v) elem = b_v;
 	};
 
 	bool is_connected(int a, int b) {
