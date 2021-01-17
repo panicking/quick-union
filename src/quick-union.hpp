@@ -3,7 +3,7 @@
 
 #include <vector>
 
-class union_find {
+class quick_union {
 	std::vector<int> array;
 	std::vector<std::size_t> sz;
 
@@ -33,8 +33,8 @@ class union_find {
 	}
 
 public:
-	union_find(const int n);
-	~union_find() = default;
+	quick_union(const int n);
+	~quick_union() = default;
 
 	void add_union(int a, int b) {
 		const int b_r = get_root(b);

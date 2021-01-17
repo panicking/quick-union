@@ -3,7 +3,7 @@
 
 using namespace std;
 
-union_find::union_find(const int n)
+quick_union::quick_union(const int n)
 {
 	array.resize(n);
 	sz.resize(n);
@@ -14,7 +14,7 @@ union_find::union_find(const int n)
 		array[i] = i;
 }
 
-void union_find::dump_connections()
+void quick_union::dump_connections()
 {
 	size_t i = 0;
 	std::cout << "Tree dump" << std::endl;

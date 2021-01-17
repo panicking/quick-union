@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-	union_find myunion(20);
+	quick_union myunion(20);
 
 	myunion.add_union(0, 3);
 	myunion.add_union(7, 4);
