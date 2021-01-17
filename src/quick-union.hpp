@@ -1,5 +1,5 @@
-#ifndef __UNION_FIND__
-#define __UNION_FIND__
+#ifndef __QUICK_UNION__
+#define __QUICK_UNION__
 
 #include <vector>
 

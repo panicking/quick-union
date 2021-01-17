@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(UnionFind VERSION 1.0.0 LANGUAGES CXX)
+project(QuickUnion VERSION 1.0.0 LANGUAGES CXX)
 
 set(DEFAULT_BUILD_TYPE "Release")
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
@@ -11,7 +11,7 @@ endif()
 
 include(GNUInstallDirs)
 
-add_library(${PROJECT_NAME} SHARED src/union-find.cpp src/union-find.hpp)
+add_library(${PROJECT_NAME} SHARED src/quick-union.cpp src/quick-union.hpp)
 target_include_directories(${PROJECT_NAME} PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
@@ -28,14 +28,14 @@ add_executable(union_test
 
 target_include_directories(union_test PRIVATE src)
 
-target_link_libraries(union_test UnionFind)
+target_link_libraries(union_test QuickUnion)
 
-install(TARGETS ${PROJECT_NAME} EXPORT UnionFind
+install(TARGETS ${PROJECT_NAME} EXPORT QuickUnion
     ARCHIVE  DESTINATION ${CMAKE_INSTALL_LIBDIR}
     LIBRARY  DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME  DESTINATION ${CMAKE_INSTALL_BINDIR})
 install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME})
 
-install(EXPORT UnionFind DESTINATION share/UnionFind/cmake)
+install(EXPORT QuickUnion DESTINATION share/QuickUnion/cmake)
 
-export(TARGETS ${PROJECT_NAME} FILE UnionFind.cmake)
+export(TARGETS ${PROJECT_NAME} FILE QuickUnion.cmake)

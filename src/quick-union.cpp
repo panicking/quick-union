@@ -1,4 +1,4 @@
-#include "union-find.hpp"
+#include "quick-union.hpp"
 #include <iostream>
 
 using namespace std;
