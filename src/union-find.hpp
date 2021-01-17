@@ -63,6 +63,8 @@ public:
 	bool is_connected(int a, int b) {
 		return get_root(a) == get_root(b);
 	}
+
+	void dump_connections();
 };
 
 #endif
